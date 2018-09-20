@@ -1,0 +1,89 @@
+2018-09-20 16:23:33,163 ERROR: Exception on /user/xiaoyq [GET] [in /Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiaoyongqiang/python/myblog/app/routes.py", line 84, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/base.html", line 34, in top-level template code
+    {% block content %}用super()显示在content里面{% endblock %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/user.html", line 27, in block "content"
+    {% include '_post.html' %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/_post.html", line 24, in top-level template code
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 86, in fromNow
+    return self._render("fromNow(%s)" % int(no_suffix), refresh)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 76, in _render
+    t = self._timestamp_as_iso_8601(self.timestamp)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 73, in _timestamp_as_iso_8601
+    return timestamp.strftime('%Y-%m-%dT%H:%M:%S' + tz)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'timestamp'
+2018-09-20 16:23:33,684 ERROR: Exception on /user/xiaoyq [GET] [in /Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/xiaoyongqiang/python/myblog/app/routes.py", line 84, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/base.html", line 34, in top-level template code
+    {% block content %}用super()显示在content里面{% endblock %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/user.html", line 27, in block "content"
+    {% include '_post.html' %}
+  File "/Users/xiaoyongqiang/python/myblog/app/templates/_post.html", line 24, in top-level template code
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 86, in fromNow
+    return self._render("fromNow(%s)" % int(no_suffix), refresh)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 76, in _render
+    t = self._timestamp_as_iso_8601(self.timestamp)
+  File "/Users/xiaoyongqiang/python/myblog/venv/lib/python3.6/site-packages/flask_moment.py", line 73, in _timestamp_as_iso_8601
+    return timestamp.strftime('%Y-%m-%dT%H:%M:%S' + tz)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'timestamp'
+2018-09-20 16:23:39,939 INFO: Microblog startup [in /Users/xiaoyongqiang/python/myblog/app/app.py:58]
